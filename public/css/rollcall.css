@@ -1,0 +1,117 @@
+/* Genel sayfa ayarları */
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f4f7fa;
+  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Ana container */
+.main {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  margin-top: 40px;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Uyarı yazısı */
+.warn {
+  background: #ffebee;
+  color: #c62828;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border: 1px solid #ef9a9a;
+}
+
+/* Her öğrenci için satır */
+.student_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fbfd;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.student_div:hover {
+  background: #e3f2fd;
+  transform: scale(1.01);
+}
+
+/* Etiket (öğrenci adı) */
+.student_label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Checkbox özelleştirmesi */
+.student_input {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #1e88e5;
+  transition: transform 0.2s ease;
+}
+
+.student_input:checked {
+  transform: scale(1.2);
+}
+
+/* Gönder butonu */
+.submit_button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit_button:hover {
+  background: #1565c0;
+  transform: scale(1.02);
+}
+
+/* Responsive ayarlar */
+@media (min-width: 600px) {
+  .main {
+    padding: 30px;
+  }
+  .student_div {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .student_label {
+    font-size: 14px;
+  }
+
+  .student_input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .submit_button {
+    font-size: 15px;
+  }
+}

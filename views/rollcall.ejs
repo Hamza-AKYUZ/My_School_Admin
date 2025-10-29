@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Yoklama</title>
+    <link rel="stylesheet" href="css/rollcall.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="warn">!!! Lütfen Sadece Olmayanları işaretleyiniz !!!</div>
+      <form action="/rollcall" method="post">
+        <% students.forEach(student => { %>
+
+        <div class="student_div" id="student_div_id_<%= student.id %>">
+          <label
+            class="student_label"
+            id="student_label_id_<%= student.id %>"
+            for=""
+            ><%= student.first_name %> <%= student.last_name %>:
+          </label>
+
+          <input
+            class="student_input"
+            type="checkbox"
+            id="student_input_id_<%= student.id %>"
+          />
+        </div>
+
+        <% }) %>
+        <button type="submit" class="submit_button">Gönder</button>
+      </form>
+    </div>
+  </body>
+</html>

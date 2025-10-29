@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="css/index.css">
+  
+
+<div class="sidebar">
+  <div class="menu-item" onclick="toggleSubmenu('ogrenciIslemleri')">
+    🎓 Öğrenci İşlemleri
+  </div>
+  <div class="submenu" id="ogrenciIslemleri">
+    <a href="#">Öğrenci Ara</a>
+    <a href="#">Öğrenciler</a>
+    <a href="#">Yeni Öğrenci</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleSubmenu('dersIslemleri')">
+    📚 E-Yoklama İşlemleri
+  </div>
+  <div class="submenu" id="dersIslemleri">
+    <a href="/rollcall">E-Yoklama</a>
+    <a href="#">E-Yoklama(QR Kod İle)</a>
+    <a href="#">Yoklama Geçmişi</a>
+
+  </div>
+
+  <div class="menu-item">⚙️ Diğer</div>
+</div>
+
+<button class="menu-btn">☰</button>
+
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const sidebar = document.querySelector('.sidebar');
+
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('open');
+  }
+</script>
