@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+//adad
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -29,16 +29,13 @@ app.get("/rollcall", (req, res) => {
   res.render("rollcall", { students: [] });
 });
 
-
 app.post("/classSelect", async (req, res) => {
   const { classSelect } = req.body;
   const sql = "SELECT * FROM users_students WHERE class = ?";
 
   try {
-   
     const [rows] = await db.query(sql, [classSelect]);
 
-  
     return res.render("rollcall", { students: rows });
   } catch (err) {
     console.error("Sorgu hatası:", err);
