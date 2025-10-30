@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Yoklama(Sınıf Seçimi)</title>
+    <style>
+      /* Genel ayarlar */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff; /* beyaz arkaplan */
+        padding: 20px;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 30px 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        border: 1px solid #ddd;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #000000; /* siyah yazı */
+        font-size: 16px;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #000;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #007bff; /* mavi buton */
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Responsive */
+      @media (max-width: 500px) {
+        form {
+          padding: 20px;
+        }
+
+        button,
+        select {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/classSelect" method="POST">
+      <label for="classSelect">Yoklama Alacağınız Sınıfı Seçiniz</label>
+      <select name="classSelect" id="classSelect">
+        <option value="7-A">7-A</option>
+        <option value="7-B">7-B</option>
+        <option value="7-C">7-C</option>
+        <option value="8-B">8-B</option>
+      </select>
+      <button type="submit">İleri</button>
+    </form>
+  </body>
+</html>
